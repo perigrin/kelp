@@ -2,7 +2,7 @@
 use strict;
 use Test::More tests => 8;
 
-use Frink::Types ':all';
+use Kelp::Types ':all';
 
 {
     ok( my $byte = to_Bytes(1), 'create a byte' );

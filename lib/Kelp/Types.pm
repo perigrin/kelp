@@ -1,4 +1,4 @@
-package Frink::Types;
+package Kelp::Types;
 use Data::Dimensions qw(&units);
 
 use MooseX::Types -declare => [
