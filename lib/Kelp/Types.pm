@@ -34,6 +34,11 @@ subtype ExbiBytes, as 'Data::Dimensions', where { $_->{units}->{byte} == exbi };
 
 coerce Bytes,     from Int, via { units( { byte => 1 },    $_ ); };
 coerce KibiBytes, from Int, via { units( { byte => kibi }, $_ ); };
+coerce MebiBytes, from Int, via { units( { byte => mebi }, $_ ); };
+coerce GibiBytes, from Int, via { units( { byte => gibi }, $_ ); };
+coerce TebiBytes, from Int, via { units( { byte => tebi }, $_ ); };
+coerce PebiBytes, from Int, via { units( { byte => pebi }, $_ ); };
+coerce ExbiBytes, from Int, via { units( { byte => exbi }, $_ ); };
 
 coerce Bytes, from KibiBytes, via { units( { byte => 1 }, $_ * kibi ) };
 coerce Bytes, from MebiBytes, via { units( { byte => 1 }, $_ * mebi ) };
